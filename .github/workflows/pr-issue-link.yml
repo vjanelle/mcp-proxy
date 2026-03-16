@@ -1,0 +1,29 @@
+name: PR Issue Reference
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  pull-requests: read
+
+jobs:
+  require-issue-reference:
+    name: Require issue reference (#Number)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate PR title/body contains issue reference
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          text="$PR_TITLE\n$PR_BODY"
+          if echo "$text" | grep -Eq '\\(#[0-9]+\\)'; then
+            echo "Issue reference found."
+            exit 0
+          fi
+
+          echo "PRs must reference an issue in the form (#Number) in the title or body."
+          echo "Example: Add restart backoff for MCP workers (#42)"
+          exit 1

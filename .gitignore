@@ -1,0 +1,19 @@
+# Go build/test caches
+.gocache/
+.gopath/
+
+# Coverage artifacts
+.coverage.out
+coverage.out
+
+# Local binaries
+*.exe
+
+# Generated index artifacts
+index.scip
+
+# Local runtime override configs
+mcp-proxy.scip-test.json
+
+# User's config
+mcp-proxy.json

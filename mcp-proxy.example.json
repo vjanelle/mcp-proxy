@@ -1,0 +1,18 @@
+{
+  "listenAddr": "127.0.0.1:18080",
+  "allowRemote": false,
+  "apiKey": "",
+  "apiKeyEnv": "",
+  "maxRPCBodyBytes": 1048576,
+  "processes": [
+    {
+      "name": "scip-mcp",
+      "command": "C:/Users/rando/.local/bin/scip-mcp.exe",
+      "args": [],
+      "workDir": "",
+      "env": [],
+      "autoStart": true,
+      "port": 18081
+    }
+  ]
+}
