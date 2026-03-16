@@ -19,8 +19,8 @@ type ProcessStatus struct {
 	PID           int       `json:"pid"`
 	Restarts      int       `json:"restarts"`
 	LastError     string    `json:"lastError,omitempty"`
-	StartedAt     time.Time `json:"startedAt,omitempty"`
-	StoppedAt     time.Time `json:"stoppedAt,omitempty"`
+	StartedAt     time.Time `json:"startedAt"`
+	StoppedAt     time.Time `json:"stoppedAt"`
 	Requests      int64     `json:"requests"`
 	Responses     int64     `json:"responses"`
 	Notifications int64     `json:"notifications"`
