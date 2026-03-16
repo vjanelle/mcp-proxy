@@ -1,5 +1,7 @@
 # mcp-proxy
 
+![mcp-proxy logo](assets/logo-minimal.svg)
+
 `mcp-proxy` is a local MCP stdio process manager with HTTP frontends and a
 debug TUI.
 
